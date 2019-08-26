@@ -1,3 +1,15 @@
 # Input Data Format {#dataformat}
 
 The online tool requires 3 kinds of inputs: disorder type, state, and metabolic information. 
+
+Disorder type and state can be specified by clicking corresponding items on the left menu tab.  
+
+The input data file could be in a comma separated values (csv) format, or in a plain text format with its delimiters being one of the following: semicolon, tab, or space. The first row of the file contains the header information for each column. Each row after the header contains the corresponding information of each sample.
+The description and format of each column are described below. As long as all the 39 marker levels are included in the file, the metabolic markers can be in any order depending on your preference.
+
+| Column         | 1    | 2-40   |
+|:-------------------|:-------------------------|:------------------------------------|
+| Headers | id | Original marker name or its abbreviation |
+| Example Headers | ID, sample | Citrulline, cit, C18:1, c181, C5-OH, C5OH |
+| Values | Unique sample id (string) | Individual marker concentration levels (numeric) |
+| Example Values | S01, sample_001 | 0.2, 0.11421383 |
