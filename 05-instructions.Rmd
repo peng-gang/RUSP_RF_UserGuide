@@ -1,0 +1,12 @@
+# instruction
+
+1. Click an item from "Disorder" drop-down menu to navigate to the disease type of your interest.
+2. Click an item from "State" drop-down menu to switch between database of each state.
+3. Click on the "Browse..." button to choose a input file from local device. The application won't keep record of any of your data or the results. Your information won't be tracked when you visit this website.
+4. Choose the delimiter of your input file and click "RUSP_RF".
+5. Once the calculation is done, the result figure and table will show on the right panel. 
+6. You could specify/underline a sample or multiple samples on the figure by clicking the corresponding row on the table. Click the row once again to cancel the specification. 
+7. Type in a keyword in the search field to search for a certain information. 
+8. Click on the "Download figure/table" button to download the results to your local devices to view them offline.
+9. While navigating to another disease type, the application will clear all current data and switch to the corresponding model. A popup dialog with the text "If you choose to continue, the current input file and the results will be cleared. Please download the results beforehand if you prefer to keep a record." will appear. Please proceed according to the instructions. 
+10. We welcome comments, suggestions and questions. Please feel free to send emails to us by clicking 'Report issues to the developers' from the bottom of the left panel. We will try our best to reply back to you in a timely manner.
