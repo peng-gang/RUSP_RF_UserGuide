@@ -1,3 +1,7 @@
 # Methods {#methods}
 
 The online tool adopted random forest [@breiman2001random] to reduce false positive rate by incorporating data form multiple metabolic analytes. 
+
+There are many *trees* in a random forest model and each *tree* has a *vote* in a binary classification. We defined a probability as the fraction of out of bag  (OOB) *votes* for true positive. If the probaiblity is larger than a cutoff, the sample is classified as true positive. By defaulty, 0.5 is used as the cutoff in random forest. However, the sample size is unbalanced in our data. We need to change the default cutoff for each disorder for the online tool.
+
+We repeated the 10 fold cross validation for 1000 times and choose the cutoff at which we can get the same sensitivity as the state criteria. The final cut off is chosen as the median of all the cutoffs of the 1000 repeats. 
