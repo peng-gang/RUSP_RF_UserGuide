@@ -1,0 +1,3 @@
+# Input Data Format {#dataformat}
+
+The online tool requires 3 kinds of inputs: disorder type, state, and metabolic information. 
