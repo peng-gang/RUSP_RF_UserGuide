@@ -1,0 +1,24 @@
+--- 
+title: "User Guide for RUSP_RF"
+author: "Gang Peng"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib]
+biblio-style: apalike
+link-citations: yes
+description: "A detailed user guide on how to use the online tool RSUP_RF"
+---
+
+# Preface{-}
+This is a detailed user guide on how to use the online tool RSUP_RF.
+
+## General Illustration
+
+Figure \@ref(fig:fig-userguide) shows the the general process to run the tool.
+
+```{r fig-userguide, echo=FALSE, fig.cap="How to run the tool", out.width="50%", fig.align="center"}
+knitr::include_graphics("images/RUSP_RF_Workflow.png")
+```
+
+

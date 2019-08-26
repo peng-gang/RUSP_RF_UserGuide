@@ -1,0 +1,5 @@
+# Introduction {#intro}
+
+Newborn screening (NBS) is one of the most successful public health programs to identify newborns with different disorders that can be treated. There are more than 40 metabolic disorders on the Recommended Universal Screening Panel (RUSP) can be detected with metabolic data using mass spectrometry (MS/MS) method from dried blood spots collected by heel stick shortly after birth. While successful in most respects, only a few biomarkers are used for each disorder in NBS with sensitivity favored over specificity, which leads to relatively high false positive rate in NBS. In order to reduce the number of false positives, we proposed to take a second-tier test for the newborns with screen-positive results in NBS. 
+
+RUSP_RF is an online tool based on random forest [@breiman2001random] method to reduce false positive rate by incorporating data form multiple metabolic analytes. 
