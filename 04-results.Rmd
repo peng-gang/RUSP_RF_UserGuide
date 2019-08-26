@@ -1,3 +1,7 @@
 # Results {#results}
 
 The online tool
+
+
+#### General View of Result Boxplot
+The left side and the right side of the boxplot represent the FP cases and TP cases in our model, respectively. The center column represents the samples from input file. The solid orange line is the optimal cutoff suggested by the RF cross validation for each disease. The user selected cutoff (represented by dotted organe line) can be changed by using the sliderbar on the left panel. The suggested status of each sample will be refreshed according to the changing cutoff. The numbers under the x-axis represent the change of error rate for TP and FP group when different cutoffs are applied. 
