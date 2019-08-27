@@ -3,9 +3,23 @@
 The online tool requires 3 kinds of inputs: disorder type, state, and metabolic information.
 
 ## Disorder Type
+Disorder type can be specified by choosing the corresponding item on the sidebar. 
 
+While navigating to a new disease type, a popup dialog with the text "If you choose to continue, the current input file and the results will be cleared. Please download the results beforehand if you prefer to keep a record." will appear. If the user choose to 'continue', the application will clear all current data and switch to the corresponding model.
 
 ## State
+State can be specified by choosing the corresponding item on the sidebar. 
+
+Our current model is based on 
 
 
 ## Metabolic information
+The input data file could be in a comma separated values (csv) format, or in a plain text format with its delimiters being one of the following: semicolon, tab, or space. The first row of the file contains the header information for each column. Each row after the header contains the corresponding information of each sample.
+The description and format of each column are described below. As long as all the 39 marker levels are included in the file, the metabolic markers can be in any order depending on your preference.
+
+| Column         | 1    | 2-40   |
+|:-------------------|:-------------------------|:------------------------------------|
+| Headers | id | Original marker name or its abbreviation |
+| Example Headers | ID, sample | Citrulline, cit, C18:1, c181, C5-OH, C5OH |
+| Values | Unique sample id (string) | Individual marker concentration levels (numeric) |
+| Example Values | S01, sample_001 | 0.2, 0.11421383 |
