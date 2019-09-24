@@ -13,8 +13,8 @@ State can be specified by choosing the corresponding item on the sidebar.
 The current model is based on the data from California. Because of the difference of NBS project between different states, the model may not fit the data out side of California. Please contact [us](mailto:gang.peng@yale.edu) if you want to include model from your state. 
 
 ## Metabolic information
-The input data file could be in a comma separated values (csv) format, or in a plain text format with its delimiters being one of the following: semicolon, tab, or space. The first row of the file contains the header information for each column. Each row after the header contains the corresponding information of each sample.
-The description and format of each column are described below. As long as all the 39 marker levels are included in the file, the metabolic markers can be in any order depending on your preference.
+The input data file could be in a comma separated values (csv) format, or in a plain text format with its delimiters being one of the following: semicolon, tab, or space. The first row of the file contains the header information for each column. Each row after the header contains the corresponding information of each sample. 
+The description and format of each column are described below. The headers are case insensitive. As long as all the 39 marker levels are included in the file, they can be in any order depending on your preference.
 
 | Column         | 1    | 2-40   |
 |:-------------------|:-------------------------|:------------------------------------|
@@ -22,3 +22,51 @@ The description and format of each column are described below. As long as all th
 | Example Headers | ID, sample | Citrulline, cit, C18:1, c181, C5-OH, C5OH |
 | Values | Unique sample id (string) | Individual marker concentration levels (numeric) |
 | Example Values | S01, sample_001 | 0.2, 0.11421383 |
+
+## A Full List of Acceptable Header Fields
+
+This table aims to list all the headers, and describe the alternatives that are acceptable in the application. 
+
+| Headers | Possible Alternatives |
+|:-----------|:-----------------------------------------------------|
+|id|ID, SAMPLE, SAMPLE IDENTIFIER, SAMPLE ID, SID, IDENTIFIER|
+|GLY|GLY, GLYCINE|
+|ALA|ALA, ALANINE|
+|PRO|PRO, PROLINE|
+|VAL|VAL, VALINE|
+|OXP|OXP, 5-OXOPROLINE, pyroglutamic acid, GLP|
+|XLE|XLE, LEU-ILE, LEU+ILE, LEUCINE+ISOLEUCINE, LEUCINE AND ISOLEUCINE, LEUCINE OR ISOLEUCINE|
+|ORN|ORN, ORNITHINE|
+|MET|MET, METHIONINE|
+|ARG|ARG, ARGININE|
+|CIT|CIT, CITRULLINE|
+|PHE|PHE, PHENYLALANINE|
+|TYR|TYR, TYROSINE|
+|C0|C0, FREE CARNITINE, FC|
+|C2|C02, C2|
+|C3|C03, C3|
+|C4|C04, C4|
+|C5:1|C051, C51, C5:1|
+|C5|C05, C5|
+|C6|C06, C6|
+|C8:1|C081, C8:1, C81|
+|C8|C08, C8|
+|C10:1|C101, C10:1|
+|C10|C10|
+|C12:1|C121, C12:1|
+|C12|C12|
+|C14:1|C141, C14:1|
+|C14|C14|
+|C14OH|C14OH, C14-OH|
+|C16:1|C161, C16:1|
+|C16|C16|
+|C16OH|C16OH, C16-OH|
+|C18:2|C182, C18:2|
+|C18:1|C181, C18:1|
+|C18|C18|
+|C18:1OH|C181OH, C18:1OH, C18:1-OH|
+|C18OH|C18OH, C18-OH|
+|C5OH|C05OH, C5OH, C5-OH|
+|C3DC|C03DC, C3DC, C3-DC|
+|C5DC|C05DC, C5DC, C5-DC|
+
