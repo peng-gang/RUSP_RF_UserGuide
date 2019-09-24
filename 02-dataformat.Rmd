@@ -10,7 +10,7 @@ While navigating to a new disease type, a popup dialog with the text "If you cho
 ## State
 State can be specified by choosing the corresponding item on the sidebar. 
 
-The current model is based on the data from California. Because of the difference of NBS project between different states, the model may not fit the data out side of California. Please contact [us](mailto:gang.peng@yale.edu) if you want to include model from your state. 
+The current model is based on the data from California. Because of the difference of NBS project between different states and country, the model may not fit the data out side of California. Please contact [us](mailto:gang.peng@yale.edu) if you want to include model from your state or country. 
 
 ## Metabolic information
 The input data file could be in a comma separated values (csv) format, or in a plain text format with its delimiters being one of the following: semicolon, tab, or space. The first row of the file contains the header information for each column. Each row after the header contains the corresponding information of each sample. 
