@@ -6,19 +6,19 @@ output:
 ---
 # Input Data Format {#dataformat}
 
-The online tool requires 3 kinds of inputs: disorder type, state, and metabolic information.
+The online tool requires 3 kinds of inputs: Disorder Type, NBS Program, and Metabolic Information.
 
 ## Disorder Type
 Disorder type can be specified by choosing the corresponding item on the sidebar. 
 
 While navigating to a new disease type, a popup dialog with the text "If you choose to continue, the current input file and the results will be cleared. Please download the results beforehand if you prefer to keep a record." will appear. If the user choose to 'continue', the application will clear all current data and switch to the corresponding model.
 
-## State
-State can be specified by choosing the corresponding item on the sidebar. 
+## NBS Program
+NBS program, which indicates the place where the data is collected from, can be specified by choosing the corresponding item on the sidebar. 
 
 The current model is based on the data from California. Because of the difference of NBS project between different states and country, the model may not fit the data out side of California. Please contact [us](mailto:gang.peng@yale.edu) if you want to include model from your state or country. 
 
-## Metabolic information
+## Metabolic Information
 The input data file could be in a comma separated values (csv) format, or in a plain text format with its delimiters being one of the following: semicolon, tab, or space. The first row of the file contains the header information for each column. Each row after the header contains the corresponding information of each sample. 
 The description and format of each column are described below. The headers are case insensitive. As long as all the 39 marker levels are included in the file, they can be in any order depending on your preference.
 
