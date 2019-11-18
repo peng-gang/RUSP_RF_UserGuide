@@ -2,18 +2,18 @@
 
 The results of the tool are shown in the right of the page: a boxplot on the top and a table on the bottom. 
 
-The boxplot (Figure \@ref(fig:fig-boxplot)) shows the distribution of the probability (fraction of *votes*) for each sample calculated from LOOCV in false and true positive groups. The estimation of the probability for the input samples is shown in the center of the boxplot. Users have to choose a cutoff for the probability to decide true positives. In order to help users to make the decision, we have a suggested cutoff as the default in the online tool. The suggested cutoff is described in Section \@ref(methods). Users can also choose the cutoff according to their data. The suggested cutoff is shown as solid line while the cutoff chosen by the users are shown in dash line. 
+The boxplot (Figure \@ref(fig:fig-boxplot)) shows the distribution of the *__RF score__* for each sample calculated from LOOCV in false and true positive groups. The *__RF score__* for the input samples is shown in the center of the boxplot. Users need to choose a cutoff of sensitivity that correlates with *__RF score__* directly. In order to help users to make the decision, we have a suggested cutoff as the default in the online tool. The suggested cutoff is described in Section \@ref(methods). Users can also choose the cutoff according to their data. The suggested cutoff is shown as solid line while the cutoff chosen by the users are shown in dash line. When users change the cutoff of sensitivity, a estimation of specificity is shown under the slider.
 
-There are numbers in the bottom of the boxplot of false and true positive. In Figure \@ref(fig:fig-boxplot), the nuber for the false positive is "302/502" and the number for the ture positive is "2/103", which indicates that 302 out of 502 false positives in the training data will still be false positive and 2 out of 103 ture positive will be false negative with user selected cutoff. In other words, we will remove 200 false positives while keep 2 false negatives (there are 4 false negatives with state criteria). Random forest removes false positives and keeps more true positives. 
-
+There are numbers at the bottom of the boxplot. In Figure \@ref(fig:fig-boxplot), the nuber for the false positive is "311/502=62.0%" and the number for the ture positive is "2/103 = 1.9%", which indicates that 302 (62.0%) out of 502 false positivesin the training data will remine to be false positive and 2 (1.9%) out of 103 ture positive will be false negative with user selected cutoff. In other words, we will remove 192 (38%) false positives while keep 2 false negatives (there are 4 false negatives with state criteria). Random forest removes false positives and keeps more true positives. 
 
 
 ```{r fig-boxplot, echo=FALSE, fig.cap="Boxplot in results", out.width="50%", fig.align="center"}
 knitr::include_graphics("image/boxplot.png")
 ```
 
-The table (Figure \@ref(fig:fig-table)) includes 4 columns: sample id, probability (fraction of *votes*), result from suggested (default) cutoof, and result from user selected cutoff.
+The table (Figure \@ref(fig:fig-table)) includes 4 columns: sample id, *__RF score__*, results from suggested (default) cutoof, and results from user selected cutoff.
 
 ```{r fig-table, echo=FALSE, fig.cap="Table in results", out.width="50%", fig.align="center"}
 knitr::include_graphics("image/table.png")
 ```
+
