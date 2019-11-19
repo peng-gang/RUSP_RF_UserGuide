@@ -9,14 +9,12 @@ output:
 The online tool requires 3 kinds of inputs: Disorder Type, NBS Program, and Metabolic Information.
 
 ## Disorder Type
-Disorder type can be specified by choosing the corresponding item on the sidebar. 
-
-While navigating to a new disease type, the application will clear current result and switch to the corresponding model. Please download the results beforehand if you prefer to keep a record.
+Disorder type can be specified by choosing the corresponding item on the sidebar. There are four disorders included in the application currently: GA-1(Glutaric Acidemia Type I), MMA(Methylmalonic Acidemia), OTCD(Ornithine transcarbamylase deficiency), and VLCADD(Very Long-chain Acyl-CoA Dehydrogenase Deficiency). 
 
 ## NBS Program
 NBS program, which indicates the place where the data is collected from, can be specified by choosing the corresponding item on the sidebar. 
 
-The current model is based on the data from California. Because of the difference of NBS project between different states and country, the model may not fit the data outside of California. Please contact [us](mailto:gang.peng@yale.edu) if you want to include model from your state or country. 
+The current model is based on data from California. Different states or countries may have different NBS programs, the model may not fit the data outside of California. Please contact [us](mailto:gang.peng@yale.edu) if you would like to cooperate with our team and include the model for your state or country. 
 
 ## Metabolic Information
 The input data file could be in a comma separated values (csv) format, or in a plain text format with its delimiters being one of the following: semicolon, tab, or space. The first row of the file contains the header information for each column. Each row after the header contains the corresponding information of each sample. 
