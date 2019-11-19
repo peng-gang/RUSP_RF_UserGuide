@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>User Guide for RUSP_RF</title>
   <meta name="description" content="A detailed user guide on how to use the online tool RSUP_RF" />
-  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
   <meta property="og:title" content="User Guide for RUSP_RF" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Gang Peng" />
 
 
-<meta name="date" content="2019-08-27" />
+<meta name="date" content="2019-11-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 
-<link rel="next" href="intro.html">
+<link rel="next" href="intro.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -40,6 +40,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -72,8 +75,9 @@
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="dataformat.html"><a href="dataformat.html"><i class="fa fa-check"></i><b>2</b> Input Data Format</a><ul>
 <li class="chapter" data-level="2.1" data-path="dataformat.html"><a href="dataformat.html#disorder-type"><i class="fa fa-check"></i><b>2.1</b> Disorder Type</a></li>
-<li class="chapter" data-level="2.2" data-path="dataformat.html"><a href="dataformat.html#state"><i class="fa fa-check"></i><b>2.2</b> State</a></li>
-<li class="chapter" data-level="2.3" data-path="dataformat.html"><a href="dataformat.html#metabolic-information"><i class="fa fa-check"></i><b>2.3</b> Metabolic information</a></li>
+<li class="chapter" data-level="2.2" data-path="dataformat.html"><a href="dataformat.html#nbs-program"><i class="fa fa-check"></i><b>2.2</b> NBS Program</a></li>
+<li class="chapter" data-level="2.3" data-path="dataformat.html"><a href="dataformat.html#metabolic-information"><i class="fa fa-check"></i><b>2.3</b> Metabolic Information</a></li>
+<li class="chapter" data-level="2.4" data-path="dataformat.html"><a href="dataformat.html#a-full-list-of-acceptable-header-fields"><i class="fa fa-check"></i><b>2.4</b> A Full List of Acceptable Header Fields</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a></li>
 <li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a></li>
@@ -99,14 +103,14 @@
 <div id="header">
 <h1 class="title">User Guide for RUSP_RF</h1>
 <p class="author"><em>Gang Peng</em></p>
-<p class="date"><em>2019-08-27</em></p>
+<p class="date"><em>2019-11-19</em></p>
 </div>
 <div id="preface" class="section level1 unnumbered">
 <h1>Preface</h1>
 <p>This is a detailed user guide on how to use the online tool RSUP_RF.</p>
 <div id="general-illustration" class="section level2 unnumbered">
 <h2>General Illustration</h2>
-<p>Figure <a href="index.html#fig:fig-userguide">0.1</a> shows the the general process to run the tool. Users select the disorder type, where the data come from (State), and then upload the input file to the online tool. The detailed description about input data file format can be found at Section <a href="dataformat.html#dataformat">2</a>. After clicking the <strong>Run RUSP_RF</strong> button, there will be a figure and a tale shown on the right of the page. Users can check the details of the reulst at Section <a href="results.html#results">4</a>.</p>
+<p>Figure <a href="index.html#fig:fig-userguide">0.1</a> shows the general process to run the tool. Users select the disorder type, where the data come from (State), and then upload the input file to the online tool. The detailed description about input data file format can be found at Section <a href="dataformat.html#dataformat">2</a>. After clicking the <strong>Run RUSP_RF</strong> button, there will be a figure and a tale shown on the right of the page. Users can check the details of the result at Section <a href="results.html#results">4</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:fig-userguide"></span>
 <img src="image/RUSP_RF_Workflow.png" alt="How to run the tool" width="50%" />
 <p class="caption">
@@ -127,11 +131,13 @@ Figure 0.1: How to run the tool
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -159,7 +165,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["RUSP_RF_UserGuide.pdf", "RUSP_RF_UserGuide.epub"],
 "toc": {
 "collapse": "subsection"
 }
@@ -174,8 +180,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

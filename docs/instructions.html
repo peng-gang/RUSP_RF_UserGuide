@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 5 Instructions | User Guide for RUSP_RF</title>
   <meta name="description" content="A detailed user guide on how to use the online tool RSUP_RF" />
-  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 5 Instructions | User Guide for RUSP_RF" />
   <meta property="og:type" content="book" />
@@ -24,15 +24,15 @@
 <meta name="author" content="Gang Peng" />
 
 
-<meta name="date" content="2019-08-27" />
+<meta name="date" content="2019-11-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="results.html">
-<link rel="next" href="references.html">
+<link rel="prev" href="results.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -40,6 +40,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -72,8 +75,9 @@
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="dataformat.html"><a href="dataformat.html"><i class="fa fa-check"></i><b>2</b> Input Data Format</a><ul>
 <li class="chapter" data-level="2.1" data-path="dataformat.html"><a href="dataformat.html#disorder-type"><i class="fa fa-check"></i><b>2.1</b> Disorder Type</a></li>
-<li class="chapter" data-level="2.2" data-path="dataformat.html"><a href="dataformat.html#state"><i class="fa fa-check"></i><b>2.2</b> State</a></li>
-<li class="chapter" data-level="2.3" data-path="dataformat.html"><a href="dataformat.html#metabolic-information"><i class="fa fa-check"></i><b>2.3</b> Metabolic information</a></li>
+<li class="chapter" data-level="2.2" data-path="dataformat.html"><a href="dataformat.html#nbs-program"><i class="fa fa-check"></i><b>2.2</b> NBS Program</a></li>
+<li class="chapter" data-level="2.3" data-path="dataformat.html"><a href="dataformat.html#metabolic-information"><i class="fa fa-check"></i><b>2.3</b> Metabolic Information</a></li>
+<li class="chapter" data-level="2.4" data-path="dataformat.html"><a href="dataformat.html#a-full-list-of-acceptable-header-fields"><i class="fa fa-check"></i><b>2.4</b> A Full List of Acceptable Header Fields</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a></li>
 <li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a></li>
@@ -104,10 +108,11 @@
 <li>Click on the <span class="math inline">\(\color{#B24745FF}{\text{Browse...}}\)</span> button to choose a input file from local device.</li>
 <li>Choose the <span class="math inline">\(\color{#B24745FF}{\text{delimiter}}\)</span> of your input file and click “RUSP_RF”.</li>
 <li>Click the <span class="math inline">\(\color{#B24745FF}{\text{Run RUSP_RF}}\)</span> button to submit the input file. Once the calculation is done, the result figure and table will show on the right panel.</li>
+<li>A <span class="math inline">\(\color{#B24745FF}{\text{suggested sensitivity cutoff}}\)</span> is used by default for deciding true/false positives in the first calculation. The sensitivity cutoff is <span class="math inline">\(\color{#B24745FF}{\text{customizable}}\)</span> with the slider bar on the left-side panel.</li>
 <li>You could <span class="math inline">\(\color{#B24745FF}{\text{specify/underline a sample or multiple samples}}\)</span> on the figure by clicking the corresponding row on the table. Click the row once again to cancel the specification.</li>
 <li>Type in a keyword in the <span class="math inline">\(\color{#B24745FF}{\text{search}}\)</span> field to search for a certain information.</li>
 <li>Click on the <span class="math inline">\(\color{#B24745FF}{\text{Download figure/table}}\)</span> button to download the results to your local devices to view them offline.</li>
-<li>While navigating to a new disease type, a popup dialog with the text “If you choose to continue, the current input file and the results will be cleared. Please download the results beforehand if you prefer to keep a record.” will appear. If the user choose to <span class="math inline">\(\color{#B24745FF}{\text{continue}}\)</span>, the application will clear all current data and switch to the corresponding model.</li>
+<li>While navigating to a new disease type, a popup dialog with the text “If you choose to continue, the current results will be cleared. Please download the results beforehand if you prefer to keep a record.” will appear. If the user chooses to <span class="math inline">\(\color{#B24745FF}{\text{continue}}\)</span>, the application will switch to the corresponding model.</li>
 </ol>
 <p>The application won’t keep record of any of your data or the results. Your information won’t be tracked when you visit this website.</p>
 <p>We welcome comments, suggestions and questions. Please feel free to send emails to us by clicking ‘<a href="gang.peng@yale.edu">Report issues to the developers</a>’ from the bottom of the left panel. We will try our best to reply back to you in a timely manner.</p>
@@ -124,11 +129,13 @@
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -156,7 +163,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["RUSP_RF_UserGuide.pdf", "RUSP_RF_UserGuide.epub"],
 "toc": {
 "collapse": "subsection"
 }
@@ -171,8 +178,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();

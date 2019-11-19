@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Input Data Format | User Guide for RUSP_RF</title>
   <meta name="description" content="A detailed user guide on how to use the online tool RSUP_RF" />
-  <meta name="generator" content="bookdown 0.12 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.14 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Input Data Format | User Guide for RUSP_RF" />
   <meta property="og:type" content="book" />
@@ -24,15 +24,15 @@
 <meta name="author" content="Gang Peng" />
 
 
-<meta name="date" content="2019-08-27" />
+<meta name="date" content="2019-11-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro.html">
-<link rel="next" href="methods.html">
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="methods.html"/>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -40,6 +40,9 @@
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
 
 
 
@@ -72,8 +75,9 @@
 <li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="dataformat.html"><a href="dataformat.html"><i class="fa fa-check"></i><b>2</b> Input Data Format</a><ul>
 <li class="chapter" data-level="2.1" data-path="dataformat.html"><a href="dataformat.html#disorder-type"><i class="fa fa-check"></i><b>2.1</b> Disorder Type</a></li>
-<li class="chapter" data-level="2.2" data-path="dataformat.html"><a href="dataformat.html#state"><i class="fa fa-check"></i><b>2.2</b> State</a></li>
-<li class="chapter" data-level="2.3" data-path="dataformat.html"><a href="dataformat.html#metabolic-information"><i class="fa fa-check"></i><b>2.3</b> Metabolic information</a></li>
+<li class="chapter" data-level="2.2" data-path="dataformat.html"><a href="dataformat.html#nbs-program"><i class="fa fa-check"></i><b>2.2</b> NBS Program</a></li>
+<li class="chapter" data-level="2.3" data-path="dataformat.html"><a href="dataformat.html#metabolic-information"><i class="fa fa-check"></i><b>2.3</b> Metabolic Information</a></li>
+<li class="chapter" data-level="2.4" data-path="dataformat.html"><a href="dataformat.html#a-full-list-of-acceptable-header-fields"><i class="fa fa-check"></i><b>2.4</b> A Full List of Acceptable Header Fields</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>3</b> Methods</a></li>
 <li class="chapter" data-level="4" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>4</b> Results</a></li>
@@ -98,21 +102,20 @@
             <section class="normal" id="section-">
 <div id="dataformat" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Input Data Format</h1>
-<p>The online tool requires 3 kinds of inputs: disorder type, state, and metabolic information.</p>
+<p>The online tool requires 3 kinds of inputs: Disorder Type, NBS Program, and Metabolic Information.</p>
 <div id="disorder-type" class="section level2">
 <h2><span class="header-section-number">2.1</span> Disorder Type</h2>
-<p>Disorder type can be specified by choosing the corresponding item on the sidebar.</p>
-<p>While navigating to a new disease type, a popup dialog with the text “If you choose to continue, the current input file and the results will be cleared. Please download the results beforehand if you prefer to keep a record.” will appear. If the user choose to ‘continue’, the application will clear all current data and switch to the corresponding model.</p>
+<p>Disorder type can be specified by choosing the corresponding item on the sidebar. There are four disorders included in the application currently: GA-1(Glutaric Acidemia Type I), MMA(Methylmalonic Acidemia), OTCD(Ornithine transcarbamylase deficiency), and VLCADD(Very Long-chain Acyl-CoA Dehydrogenase Deficiency).</p>
 </div>
-<div id="state" class="section level2">
-<h2><span class="header-section-number">2.2</span> State</h2>
-<p>State can be specified by choosing the corresponding item on the sidebar.</p>
-<p>The current model is based on the data from California. Because of the difference of NBS project between different states and country, the model may not fit the data out side of California. Please contact <a href="mailto:gang.peng@yale.edu">us</a> if you want to include model from your state or country.</p>
+<div id="nbs-program" class="section level2">
+<h2><span class="header-section-number">2.2</span> NBS Program</h2>
+<p>NBS program, which indicates the place where the data is collected from, can be specified by choosing the corresponding item on the sidebar.</p>
+<p>The current model is based on data from California. Different states or countries may have different NBS programs, the model may not fit the data outside of California. Please contact <a href="mailto:gang.peng@yale.edu">us</a> if you would like to cooperate with our team and include the model for your state or country.</p>
 </div>
 <div id="metabolic-information" class="section level2">
-<h2><span class="header-section-number">2.3</span> Metabolic information</h2>
+<h2><span class="header-section-number">2.3</span> Metabolic Information</h2>
 <p>The input data file could be in a comma separated values (csv) format, or in a plain text format with its delimiters being one of the following: semicolon, tab, or space. The first row of the file contains the header information for each column. Each row after the header contains the corresponding information of each sample.
-The description and format of each column are described below. As long as all the 39 marker levels are included in the file, the metabolic markers can be in any order depending on your preference.</p>
+The description and format of each column are described below. The headers are case insensitive. As long as all the 39 marker levels are included in the file, they can be in any order depending on your preference.</p>
 <table>
 <colgroup>
 <col width="24%" />
@@ -149,6 +152,184 @@ The description and format of each column are described below. As long as all th
 </tr>
 </tbody>
 </table>
+</div>
+<div id="a-full-list-of-acceptable-header-fields" class="section level2">
+<h2><span class="header-section-number">2.4</span> A Full List of Acceptable Header Fields</h2>
+<p>This table aims to list all the headers, and describe the alternatives that are acceptable in the application.</p>
+<table>
+<colgroup>
+<col width="18%" />
+<col width="81%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Headers</th>
+<th align="left">Possible Alternatives</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">id</td>
+<td align="left">ID, SAMPLE, SAMPLE IDENTIFIER, SAMPLE ID, SID, IDENTIFIER</td>
+</tr>
+<tr class="even">
+<td align="left">GLY</td>
+<td align="left">GLY, GLYCINE</td>
+</tr>
+<tr class="odd">
+<td align="left">ALA</td>
+<td align="left">ALA, ALANINE</td>
+</tr>
+<tr class="even">
+<td align="left">PRO</td>
+<td align="left">PRO, PROLINE</td>
+</tr>
+<tr class="odd">
+<td align="left">VAL</td>
+<td align="left">VAL, VALINE</td>
+</tr>
+<tr class="even">
+<td align="left">OXP</td>
+<td align="left">OXP, 5-OXOPROLINE, pyroglutamic acid, GLP</td>
+</tr>
+<tr class="odd">
+<td align="left">XLE</td>
+<td align="left">XLE, LEU-ILE, LEU+ILE, LEUCINE+ISOLEUCINE, LEUCINE AND ISOLEUCINE, LEUCINE OR ISOLEUCINE</td>
+</tr>
+<tr class="even">
+<td align="left">ORN</td>
+<td align="left">ORN, ORNITHINE</td>
+</tr>
+<tr class="odd">
+<td align="left">MET</td>
+<td align="left">MET, METHIONINE</td>
+</tr>
+<tr class="even">
+<td align="left">ARG</td>
+<td align="left">ARG, ARGININE</td>
+</tr>
+<tr class="odd">
+<td align="left">CIT</td>
+<td align="left">CIT, CITRULLINE</td>
+</tr>
+<tr class="even">
+<td align="left">PHE</td>
+<td align="left">PHE, PHENYLALANINE</td>
+</tr>
+<tr class="odd">
+<td align="left">TYR</td>
+<td align="left">TYR, TYROSINE</td>
+</tr>
+<tr class="even">
+<td align="left">C0</td>
+<td align="left">C0, FREE CARNITINE, FC</td>
+</tr>
+<tr class="odd">
+<td align="left">C2</td>
+<td align="left">C02, C2</td>
+</tr>
+<tr class="even">
+<td align="left">C3</td>
+<td align="left">C03, C3</td>
+</tr>
+<tr class="odd">
+<td align="left">C4</td>
+<td align="left">C04, C4</td>
+</tr>
+<tr class="even">
+<td align="left">C5:1</td>
+<td align="left">C051, C51, C5:1</td>
+</tr>
+<tr class="odd">
+<td align="left">C5</td>
+<td align="left">C05, C5</td>
+</tr>
+<tr class="even">
+<td align="left">C6</td>
+<td align="left">C06, C6</td>
+</tr>
+<tr class="odd">
+<td align="left">C8:1</td>
+<td align="left">C081, C8:1, C81</td>
+</tr>
+<tr class="even">
+<td align="left">C8</td>
+<td align="left">C08, C8</td>
+</tr>
+<tr class="odd">
+<td align="left">C10:1</td>
+<td align="left">C101, C10:1</td>
+</tr>
+<tr class="even">
+<td align="left">C10</td>
+<td align="left">C10</td>
+</tr>
+<tr class="odd">
+<td align="left">C12:1</td>
+<td align="left">C121, C12:1</td>
+</tr>
+<tr class="even">
+<td align="left">C12</td>
+<td align="left">C12</td>
+</tr>
+<tr class="odd">
+<td align="left">C14:1</td>
+<td align="left">C141, C14:1</td>
+</tr>
+<tr class="even">
+<td align="left">C14</td>
+<td align="left">C14</td>
+</tr>
+<tr class="odd">
+<td align="left">C14OH</td>
+<td align="left">C14OH, C14-OH</td>
+</tr>
+<tr class="even">
+<td align="left">C16:1</td>
+<td align="left">C161, C16:1</td>
+</tr>
+<tr class="odd">
+<td align="left">C16</td>
+<td align="left">C16</td>
+</tr>
+<tr class="even">
+<td align="left">C16OH</td>
+<td align="left">C16OH, C16-OH</td>
+</tr>
+<tr class="odd">
+<td align="left">C18:2</td>
+<td align="left">C182, C18:2</td>
+</tr>
+<tr class="even">
+<td align="left">C18:1</td>
+<td align="left">C181, C18:1</td>
+</tr>
+<tr class="odd">
+<td align="left">C18</td>
+<td align="left">C18</td>
+</tr>
+<tr class="even">
+<td align="left">C18:1OH</td>
+<td align="left">C181OH, C18:1OH, C18:1-OH</td>
+</tr>
+<tr class="odd">
+<td align="left">C18OH</td>
+<td align="left">C18OH, C18-OH</td>
+</tr>
+<tr class="even">
+<td align="left">C5OH</td>
+<td align="left">C05OH, C5OH, C5-OH</td>
+</tr>
+<tr class="odd">
+<td align="left">C3DC</td>
+<td align="left">C03DC, C3DC, C3-DC</td>
+</tr>
+<tr class="even">
+<td align="left">C5DC</td>
+<td align="left">C05DC, C5DC, C5-DC</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -163,11 +344,13 @@ The description and format of each column are described below. As long as all th
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -195,7 +378,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["RUSP_RF_UserGuide.pdf", "RUSP_RF_UserGuide.epub"],
 "toc": {
 "collapse": "subsection"
 }
@@ -210,8 +393,9 @@ gitbook.start({
     script.type = "text/javascript";
     var src = "true";
     if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(src))
-      src = src.replace(/^https?:/, '');
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
