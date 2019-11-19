@@ -2,6 +2,7 @@
 
 The online tool adopted random forest [@breiman2001random] to reduce false positive rate by incorporating information from multiple metabolic analytes. 
 
-There are many *trees* in a random forest model and each *tree* has a *vote* in a binary classification. We defined the *__RF Score__* as the fraction of *votes* for true positive. The ROC curve is drawn from the *__RF Score__*. There is a direct correlation between *__RF Score__* and sensitivity. In this case we decided to use sensitivity as the cutoff to separate true positives and false positives in random forest.
+There are many *trees* in a random forest model and each *tree* has a *vote* in a binary classification. We defined the *__RF Score__* as the fraction of *votes* for true positive. The ROC curve is drawn from the *__RF Score__*. In our study, high *__RF Score__* indicates high probability of true positive and low *__RF Score__* indicates high probability of false positive. There is a direct correlation between *__RF Score__* and sensitivity. In this case we decided to use sensitivity as the cutoff to separate true positives and false positives in random forest.
 
 In order to decide the default cutoff, we repeated the 10-fold cross validation for 1000 times and calculated *__RF Score__* at which we can get the same sensitivity as the state NBS program for each repeat. The median of *__RF Score__* is considered at which we can get expected sensitivity as the state NBS program. 
+
